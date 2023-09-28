@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/loginform.js" defer></script>
 </head>
 <body>
     <div class="left-side-content">
@@ -41,11 +42,12 @@
                     
                         <div>
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" name="phone" id="phone" placeholder="0123456789" required>
+                            <input type="tel" name="phone" id="phone" placeholder="0123456789" maxlength="10" pattern="[0-9]{10}" required>
                         </div>
-                        <div>
+                        <div class="confirm-password-container">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
                             <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm your password" required>
+                            <span id="wrong-pass-alert"></span>
                         </div>
                     </div>
                 </div>
