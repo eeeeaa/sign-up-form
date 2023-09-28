@@ -6,13 +6,14 @@ const wrongPassAlert = document.querySelector('#wrong-pass-alert');
 function validatePassword(){
     let currentPass = password.value;
     let currentConfirm = confirmPassword.value;
-    if (currentPass != currentConfirm) {
-        wrongPassAlert.textContent
-            = '☒ Not Match';
+    if(currentPass == "" || currentConfirm == ""){
+        wrongPassAlert.textContent = "Please enter password";
+    } else if (currentPass != currentConfirm) {
+        wrongPassAlert.textContent = '☒ Not Match';
     } else {
-        wrongPassAlert.textContent =
-            '🗹 Matched';
+        wrongPassAlert.textContent = '🗹 Matched';
     }
+    //wrongPassAlert.classList.toggle("span-fade-in-out");
     return currentPass != currentConfirm;
 }
 

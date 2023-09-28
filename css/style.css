@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Mooli');
 :root {
     --left-side-width: 40vw;
     --left-side-height: 40vh;
@@ -6,9 +7,12 @@
     --right-side-height: 60vh;
 
     --start-margin: 2.5em;
+
+    font-family: Mooli, Roboto, sans-serif;
     color: white;
 }
 
+/*Animations*/
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -19,15 +23,38 @@
     }
 }
 
+.header-info-text,
+.form-content,
+.form-footer {
+    opacity: 0;
+    animation: fadeIn ease 1s;
+    animation-fill-mode: forwards;
+}
+
+.header-info-text {
+    animation-delay: 100ms;
+}
+
+.form-content {
+    animation-delay: 300ms;
+}
+
+.form-footer {
+    animation-delay: 500ms;
+}
+
+.span-fade-in-out{
+    opacity: 0;
+    transition: opacity 1s ease;
+ }
+
+/*Styling*/
 body {
     margin: 0;
-    font-family: Roboto, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-attachment: fixed;
-    background: center/cover no-repeat url(../img/vecteezy_abstract-colorful-70s-background-vector-vintage-retro_21672511.jpg);
 }
 
 .hidden,
@@ -50,6 +77,7 @@ a {
     justify-content: center;
     align-items: center;
     color: white;
+    background: center/cover no-repeat url(../img/vecteezy_abstract-colorful-70s-background-vector-vintage-retro_21672511.jpg);
 }
 
 .left-side-content .page-logo {
@@ -75,37 +103,18 @@ a {
     background: linear-gradient(75deg, rgb(27, 27, 54), rgb(11, 11, 22));
 }
 
-.header-info-text,
-.form-content,
-.form-footer {
-    opacity: 0;
-    animation: fadeIn ease 1s;
-    animation-fill-mode: forwards;
-}
-
-.header-info-text {
-    animation-delay: 100ms;
-}
-
-.form-content {
-    animation-delay: 300ms;
-}
-
-.form-footer {
-    animation-delay: 500ms;
-}
-
 .header-info-text {
     margin-left: var(--start-margin);
     margin-right: var(--start-margin);
     font-size: large;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .form-content {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: var(--start-margin);
     gap: 1em;
@@ -113,8 +122,8 @@ a {
 
 .form-content label {
     display: block;
-    font-size: small;
-    font-weight: 500;
+    font-size: smaller;
+    font-weight: 600;
     margin-bottom: 0.5em;
 }
 
@@ -125,7 +134,7 @@ a {
     background-color: #f5f5f5;
     border: 1px solid #E5E7EB;
     border-radius: 3px;
-    padding: 7px;
+    padding: 7px 4vw;
     font-size: 14px;
 
 }
@@ -212,17 +221,10 @@ a {
     }
 
     .form-content {
-        justify-content: start;
+        justify-content: space-between;
         align-items: start;
         flex-direction: row;
         gap: 2em;
-    }
-
-    .form-content label {
-        display: flex;
-        text-align: right;
-        width: 100%;
-        padding-right: 50%;
     }
 
     .form-footer .submit-button {
