@@ -9,9 +9,11 @@
 </head>
 <body>
     <div class="left-side-content">
-        <img class="page-logo" src="#" alt="logo">
-        <div class="logo-text">EEEEAA WEBSITE</div>
-        <footer>@Wallpaper by <a href="https://www.vecteezy.com/members/neelrong">Emran Uddin</a></footer>
+        <div class="logo-content">
+            <img class="page-logo" src="./img/odin-lined.png" alt="logo">
+            <div class="logo-text">ODIN</div>
+        </div>
+        <p class="background-footer-text">@Wallpaper by <a href="https://www.vecteezy.com/members/neelrong">Emran Uddin</a></p>
     </div>
     <div class="right-side-content">
         <div class="header-info-text">
@@ -24,32 +26,38 @@
             <form action="" method="post">
                 <div class="form-content">
                     <div class="form-row">
-                        <div>
+                        <div class="input-container">
                             <label for="first_name">FIRST NAME</label>
                             <input type="text" name="first_name" id="first_name" placeholder="Susan" required>
+                            <span></span>
                         </div>
-                        <div>
+                        <div class="input-container">
                             <label for="email">EMAIL</label>
                             <input type="email" name="email" id="email" placeholder="joe@example.com" required>
+                            <span></span>
                         </div>
-                        <div>
+                        <div class="input-container">
                             <label for="password">PASSWORD</label>
                             <input type="password" name="password" id="password" placeholder="enter your password..." required>
+                            <span></span>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div>
+                        <div class="input-container">
                             <label for="last_name">LAST NAME</label>
                             <input type="text" name="last_name" id="last_name" placeholder="Manhattan" required>
+                            <span></span>
                         </div>
                     
-                        <div>
+                        <div class="input-container">
                             <label for="phone">PHONE NUMBER</label>
                             <input type="tel" name="phone" id="phone" placeholder="0123456789" maxlength="10" pattern="[0-9]{10}" required>
+                            <span></span>
                         </div>
-                        <div class="confirm-password-container">
+                        <div class="input-container">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
                             <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm your password" required>
+                            <span></span>
                             <span id="wrong-pass-alert"></span>
                         </div>
                     </div>

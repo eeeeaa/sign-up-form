@@ -8,12 +8,15 @@ function validatePassword(){
     let currentConfirm = confirmPassword.value;
     if(currentPass == "" || currentConfirm == ""){
         wrongPassAlert.textContent = "Please enter password";
+        wrongPassAlert.style.backgroundColor = "#cc6600";
     } else if (currentPass != currentConfirm) {
-        wrongPassAlert.textContent = '☒ Not Match';
+        wrongPassAlert.textContent = '☒ Password do not Match';
+        wrongPassAlert.style.backgroundColor = "#990000";
     } else {
-        wrongPassAlert.textContent = '🗹 Matched';
+        wrongPassAlert.textContent = '🗹 Password matched';
+        wrongPassAlert.style.backgroundColor = "green";
     }
-    //wrongPassAlert.classList.toggle("span-fade-in-out");
+    
     return currentPass != currentConfirm;
 }
 
