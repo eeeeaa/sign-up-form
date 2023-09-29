@@ -121,6 +121,19 @@ a {
     max-width: 600px;
 }
 
+.right-side-content .form-header {
+    margin-left: var(--start-margin);
+    margin-right: var(--start-margin);
+    width: fit-content;
+    padding: 8px;
+    font-size: large;
+    font-style: italic;
+    border: 1px solid transparent;
+    background: no-repeat linear-gradient(90deg, rgb(224, 48, 136), rgb(49, 49, 95));
+    border-radius: 8px 0px 8px 0px;
+    color: rgb(255, 255, 255);
+}
+
 .right-side-content .form-content {
     display: flex;
     justify-content: space-between;
